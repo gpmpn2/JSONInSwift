@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="JSONInSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i1q-FU-FhA">
+                                <rect key="frame" x="90" y="73" width="195" height="30"/>
+                                <state key="normal" title="Serialize JSON with Codable"/>
+                                <connections>
+                                    <action selector="handleCodable:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D99-tE-PNc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5DE-Pt-cyg">
+                                <rect key="frame" x="57" y="163" width="261" height="30"/>
+                                <state key="normal" title="Serialize JSON with JSONSerialization"/>
+                                <connections>
+                                    <action selector="handleSerialization:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d7L-lZ-eVq"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Wfp-Ix-SvS">
+                                <rect key="frame" x="5" y="283" width="365" height="379"/>
+                                <color key="backgroundColor" red="0.91784731217616577" green="0.91784731217616577" blue="0.91784731217616577" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="5DE-Pt-cyg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="8Yb-YU-ICs"/>
+                            <constraint firstItem="i1q-FU-FhA" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Haq-wQ-sAN"/>
+                            <constraint firstItem="Wfp-Ix-SvS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="Nn7-91-QUV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wfp-Ix-SvS" secondAttribute="trailing" constant="5" id="bXU-Sf-tgi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Wfp-Ix-SvS" secondAttribute="bottom" constant="5" id="dhf-u1-eRu"/>
+                            <constraint firstItem="5DE-Pt-cyg" firstAttribute="top" secondItem="i1q-FU-FhA" secondAttribute="bottom" constant="60" id="ecf-Nv-Bau"/>
+                            <constraint firstItem="Wfp-Ix-SvS" firstAttribute="top" secondItem="5DE-Pt-cyg" secondAttribute="bottom" constant="90" id="mOO-pn-U9O"/>
+                            <constraint firstItem="i1q-FU-FhA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="53" id="sZQ-Fd-NZw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="Wfp-Ix-SvS" id="wE6-4f-i9m"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
